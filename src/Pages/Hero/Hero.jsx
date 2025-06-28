@@ -19,7 +19,7 @@ const Hero = () => {
       }
     };
 
-    handleResize(); // run on mount
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -37,16 +37,6 @@ const Hero = () => {
             animate={{ scale: [1, 1.05, 1], opacity: [0.2, 0.4, 0.2] }}
             transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
           />
-          <motion.div
-            className="absolute top-3/4 right-1/4 w-48 h-48 sm:w-72 sm:h-72 bg-indigo-600 rounded-full mix-blend-multiply filter blur-xl opacity-20"
-            animate={{ scale: [1, 1.05, 1], opacity: [0.2, 0.4, 0.2] }}
-            transition={{
-              duration: 18,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 3,
-            }}
-          />
         </div>
       </div>
 
@@ -60,7 +50,7 @@ const Hero = () => {
 
           <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
             I am a passionate{" "}
-            <span className="font-semibold text-cyan-400">
+            <span className="font-semibold text-cyan-500">
               MERN Stack Developer
             </span>{" "}
             who loves creating beautiful, efficient, <br /> and user-friendly
@@ -70,10 +60,10 @@ const Hero = () => {
           <div className="flex gap-3 justify-center items-center md:justify-start pt-2 sm:pt-4">
             <button
               href="#_"
-              class=" rounded px-6 py-3 overflow-hidden cursor-pointer group bg-gradient-to-r from-blue-400 to-purple-500 relative hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 text-white hover:ring-2 hover:ring-offset-2  transition-all ease-out duration-300"
+              className=" rounded px-6 py-3 overflow-hidden cursor-pointer group bg-gradient-to-r from-blue-400 to-purple-500 relative hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 text-white hover:ring-2 hover:ring-offset-2  transition-all ease-out duration-300"
             >
-              <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-cyan-400 opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-              <span class="relative text-center">Download CV</span>
+              <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-cyan-400 opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+              <span className="relative text-center">Download CV</span>
             </button>
 
             <button
@@ -82,10 +72,10 @@ const Hero = () => {
                   .getElementById("contact")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              class=" px-6 py-3 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-cyan-400 rounded-md text-cyan-400"
+              className=" px-6 py-3 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-cyan-400 rounded-md text-cyan-400"
             >
-              <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-cyan-400/10 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-              <span class="relative text-cyan-400 transition duration-300 group-hover:text-white ease ">
+              <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-cyan-400/10 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+              <span className="relative text-cyan-400 transition duration-300 group-hover:text-white ease ">
                 Contact Me
               </span>
             </button>
