@@ -1,21 +1,23 @@
 import React from "react";
-import "./style.css";
 import rabbiImg from "../../assets/rabbiImg.png";
 const About = () => {
   return (
-    <div id="about" className="min-h-[calc(100vh-300px)]  bg-gray-800 ">
+    <div
+      id="about"
+      className="min-h-[calc(100vh-300px)] md:min-h-[calc(100vh-500px)] lg:min-h-[calc(100vh-300px)]  bg-gray-800 "
+    >
       <h1 className="text-5xl text-center pt-8 bg-gradient-to-r from-sky-500 to-indigo-400 bg-clip-text text-transparent font-bold">
         About Me{" "}
       </h1>
       <div className="h-[2px] w-[170px] bg-sky-500 mx-auto mb-6 mt-3 "></div>
-      <section className=" flex items-center justify-center px-6 text-white font-sans">
+      <section className=" flex items-center justify-center px-6 text-white font-sans md:pt-10">
         <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
             <p className="mt-6  text-gray-300 text-lg md:text-xl lg:text-2xl">
               Hi there!👋 I'm a passionate{" "}
               <span className="font-semibold text-cyan-500">
                 MERN Stack Developer
-              </span>{" "}
+              </span>
               specializing in crafting robust web applications. With a keen
               focus on user-centric design and seamless functionality, I thrive
               on leveraging MongoDB for flexible data management, harnessing
@@ -34,7 +36,7 @@ const About = () => {
             <img
               src={rabbiImg}
               alt=""
-              className="w-64 h-auto mb-10 object-cover rounded-md"
+              className="w-64 h-auto mb-10  object-cover rounded-md"
             />
           </div>
         </div>
