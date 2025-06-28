@@ -2,7 +2,7 @@ import React from "react";
 
 const Project = () => {
   return (
-    <div>
+    <div id="project" className="min-h-screen">
       <h1>Project Section </h1>
     </div>
   );

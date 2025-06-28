@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div>
+    <div id="hero" className="min-h-screen">
       <h1>Hero Section Tab </h1>
     </div>
   );
