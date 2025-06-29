@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import rabbi from "../../assets/rabbi.png";
 import TiltedCard from "./Titlecard/Titlecard";
+import { Link } from "react-router";
 
 const Hero = () => {
   const [imageSize, setImageSize] = useState(300);
@@ -58,13 +59,13 @@ const Hero = () => {
           </p>
 
           <div className="flex gap-3 justify-center items-center md:justify-start pt-2 sm:pt-4">
-            <button
-              href="#_"
-              className=" rounded px-6 py-3 overflow-hidden cursor-pointer group bg-gradient-to-r from-blue-400 to-purple-500 relative hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 text-white hover:ring-2 hover:ring-offset-2  transition-all ease-out duration-300"
+            <Link
+              to="/"
+              className="rounded px-6 py-3 overflow-hidden cursor-pointer group bg-gradient-to-r from-blue-400 to-purple-500 relative hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 text-white hover:ring-2 hover:ring-offset-2 transition-all ease-out duration-300"
             >
               <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-cyan-400 opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
               <span className="relative text-center">Download CV</span>
-            </button>
+            </Link>
 
             <button
               onClick={() =>

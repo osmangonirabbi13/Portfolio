@@ -1,5 +1,6 @@
 import React from "react";
 import rabbiImg from "../../assets/rabbiImg.png";
+import { Link } from "react-router";
 const About = () => {
   return (
     <div

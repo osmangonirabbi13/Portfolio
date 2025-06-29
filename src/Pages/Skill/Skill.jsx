@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import css from "./icons/css-3.png";
 import firebase from "./icons/firebase.jpeg";
 import github from "./icons/github.png";
@@ -32,21 +31,11 @@ const Skill = () => {
       id="skills"
       className="min-h-[calc(100vh-300px)] md:min-h-[calc(100vh-500px)] lg:min-h-[calc(100vh-300px)] bg-gray-900  overflow-hidden pt-10"
     >
-      <h1 className="text-4xl sm:text-5xl text-center bg-gradient-to-r from-sky-500 to-indigo-400 bg-clip-text text-transparent font-bold">
+      <h1 className="text-4xl sm:text-5xl text-center bg-gradient-to-r from-sky-500 to-indigo-400 bg-clip-text text-transparent pb-3 font-bold">
         Skills & Technologies
       </h1>
       <div className="h-[2px] w-[250px] bg-sky-500 mx-auto mb-6 mt-3"></div>
 
-      {/* Background Motion Blur Circle */}
-      <div className="absolute -inset-10 opacity-20">
-        <motion.div
-          className="absolute top-1/3 left-1/4 w-60 h-60 bg-blue-600 rounded-full mix-blend-multiply filter blur-2xl opacity-20"
-          animate={{ scale: [1, 1.05, 1], opacity: [0.2, 0.4, 0.2] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </div>
-
-      {/* Skills Grid */}
       <div className="relative z-10 flex flex-wrap justify-center gap-6 px-4 py-10 lg:max-w-8xl lg:mx-auto lg:px-50">
         {skills.map((skill) => (
           <div

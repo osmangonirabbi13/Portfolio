@@ -102,9 +102,9 @@ const Navbar = () => {
 
           {/* Right: CV Button for Desktop */}
           <div className="flex-1 flex justify-end  lg:flex">
-            <a href="#cv">
+            <Link to="/">
               <button className="btn btn-primary">My CV</button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
