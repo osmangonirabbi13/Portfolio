@@ -39,8 +39,9 @@ const Skill = () => {
       <div className="relative z-10 flex flex-wrap justify-center gap-6 px-4 py-10 lg:max-w-8xl lg:mx-auto lg:px-50">
         {skills.map((skill) => (
           <div
+            data-aos="flip-up"
             key={skill.name}
-            className="w-28 sm:w-36 p-4 bg-cyan-400/10 bg-opacity-5 backdrop-blur rounded shadow-md flex flex-col items-center"
+            className="w-28 sm:w-36 p-4 bg-cyan-400/10 bg-opacity-5 backdrop-blur rounded shadow-md flex flex-col items-center "
           >
             <img
               src={skill.image}

@@ -17,7 +17,7 @@ const About = () => {
             <p className="mt-6  text-gray-300 text-lg md:text-xl lg:text-2xl">
               Hi there!👋 I'm a passionate{" "}
               <span className="font-semibold text-cyan-500">
-                MERN Stack Developer
+                MERN Stack Developer{" "}
               </span>
               specializing in crafting robust web applications. With a keen
               focus on user-centric design and seamless functionality, I thrive

@@ -1,8 +1,15 @@
 import React from "react";
-
+import { FaLinkedinIn } from "react-icons/fa6";
+import { HiOutlineMail } from "react-icons/hi";
+import { PiGithubLogoLight } from "react-icons/pi";
+import { Link } from "react-router";
 const Contact = () => {
   return (
-    <section id="contact" className="bg-gray-900 py-16 px-4">
+    <section
+      data-aos="zoom-in-up"
+      id="contact"
+      className="bg-gray-900 py-16 px-4"
+    >
       <h2 className="text-3xl text-center mb-6 bg-gradient-to-r from-sky-500 to-indigo-400 bg-clip-text text-transparent font-bold">
         Contact
       </h2>
@@ -12,7 +19,7 @@ const Contact = () => {
           <h3 className="text-xl font-semibold mb-4 bg-gradient-to-r from-sky-500 to-indigo-400 bg-clip-text text-transparent ">
             Contact Information
           </h3>
-          <div className="h-40  rounded-lg bg-cyan-400/10 p-5">
+          <div className=" rounded-lg bg-cyan-400/10 p-5">
             <ul className="text-gray-200  font-medium">
               <li className="mb-4">
                 <p>
@@ -30,6 +37,28 @@ const Contact = () => {
                 </p>
               </li>
             </ul>
+            <div className="flex gap-5 justify-center md:justify-start lg:justify-start">
+              <Link
+                target="_blank"
+                to="https://www.linkedin.com/in/md-osman-goni-rabbi/"
+                className="p-3 cursor-pointer border border-gray-600 rounded-lg hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
+              >
+                <FaLinkedinIn color="white" size={30} />
+              </Link>
+              <Link
+                target="_blank"
+                to="https://github.com/osmangonirabbi13"
+                className="p-3 cursor-pointer border border-gray-600 rounded-lg hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
+              >
+                <PiGithubLogoLight color="white" size={30} />
+              </Link>
+              <Link
+                to="mailto:osmanrabbi89@gmail.com"
+                className="p-3 cursor-pointer border border-gray-600 rounded-lg hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
+              >
+                <HiOutlineMail color="white" size={30} />
+              </Link>
+            </div>
           </div>
         </div>
 

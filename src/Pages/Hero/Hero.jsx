@@ -4,6 +4,10 @@ import { motion } from "framer-motion";
 import rabbi from "../../assets/rabbi.png";
 import TiltedCard from "./Titlecard/Titlecard";
 import { Link } from "react-router";
+import { Typewriter } from "react-simple-typewriter";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { HiOutlineMail } from "react-icons/hi";
+import { PiGithubLogoLight } from "react-icons/pi";
 
 const Hero = () => {
   const [imageSize, setImageSize] = useState(300);
@@ -46,25 +50,55 @@ const Hero = () => {
         {/* Left Text Section */}
         <div className="w-full space-y-4 sm:space-y-6 text-center md:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold  bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Hi <span className="text-fuchsia-400">👋</span>, I'm Osman Goni
+            Hi <span className="text-fuchsia-400">👋</span>,I'm Osman Goni
           </h1>
 
           <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
             I am a passionate{" "}
             <span className="font-semibold text-cyan-500">
-              MERN Stack Developer
+              <Typewriter
+                cursor
+                cursorBlinking
+                cursorColor="#cd0808"
+                delaySpeed={1000}
+                deleteSpeed={25}
+                loop={0}
+                typeSpeed={100}
+                words={["MERN Stack Developer ", "Front End Developer"]}
+              />
             </span>{" "}
             who loves creating beautiful, efficient, <br /> and user-friendly
             websites.
           </p>
-
+          <div className="flex gap-5 justify-center md:justify-start lg:justify-start">
+            <Link
+              target="_blank"
+              to="https://www.linkedin.com/in/md-osman-goni-rabbi/"
+              className="p-3 cursor-pointer border border-gray-600 rounded-lg hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
+            >
+              <FaLinkedinIn color="white" size={30} />
+            </Link>
+            <Link
+              target="_blank"
+              to="https://github.com/osmangonirabbi13"
+              className="p-3 cursor-pointer border border-gray-600 rounded-lg hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
+            >
+              <PiGithubLogoLight color="white" size={30} />
+            </Link>
+            <Link
+              to="mailto:osmanrabbi89@gmail.com"
+              className="p-3 cursor-pointer border border-gray-600 rounded-lg hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
+            >
+              <HiOutlineMail color="white" size={30} />
+            </Link>
+          </div>
           <div className="flex gap-3 justify-center items-center md:justify-start pt-2 sm:pt-4">
             <Link
               to="/"
               className="rounded px-6 py-3 overflow-hidden cursor-pointer group bg-gradient-to-r from-blue-400 to-purple-500 relative hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 text-white hover:ring-2 hover:ring-offset-2 transition-all ease-out duration-300"
             >
               <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-cyan-400 opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-              <span className="relative text-center">Download CV</span>
+              <span className="relative text-center">Download Resume</span>
             </Link>
 
             <button
@@ -85,6 +119,7 @@ const Hero = () => {
 
         {/* Right Image Section */}
         <div
+          data-aos="zoom-in-up"
           className={`w-[${imageSize}px] h-[${imageSize}px]`}
           style={{
             width: `${imageSize}px`,

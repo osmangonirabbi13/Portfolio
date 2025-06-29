@@ -2,10 +2,10 @@ import React from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { FaHome } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
-
+import code from "../../assets/code.png";
 const Navbar = () => {
   return (
-    <div className="w-full sticky top-0 z-50 bg-base-200 shadow px-4 md:px-20 lg:px-40">
+    <div className="w-full sticky top-0 z-50  shadow-md px-4 bg-gray-900 md:px-20 lg:px-40">
       {/* === Top Navbar === */}
       <div className="navbar px-0 flex items-center justify-between">
         {/* === Mobile/Tablet Layout === */}
@@ -17,17 +17,22 @@ const Navbar = () => {
 
           {/* Logo */}
           <div
-            className="font-bold text-xl cursor-pointer"
+            className="font-bold text-xl cursor-pointer flex gap-2 items-center"
             onClick={() => scroll.scrollToTop()}
           >
-            Osman Goni
+            <span>
+              <img className="w-6 h-6" src={code} alt="" />
+            </span>
+            <p className="text-white">Osman Goni</p>
           </div>
 
           {/* My CV button for mobile & tablet */}
           <div className="ml-auto md:block lg:hidden">
-            <a href="#cv">
-              <button className="btn btn-primary btn-sm">My CV</button>
-            </a>
+            <Link to="/">
+              <button className="btn btn-primary btn-sm">
+                Download Resume
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -35,22 +40,25 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center justify-between w-full">
           {/* Left: Logo */}
           <div
-            className="font-bold text-xl cursor-pointer flex-1"
+            className="font-bold text-xl cursor-pointer flex items-center gap-3 flex-1 "
             onClick={() => scroll.scrollToTop()}
           >
-            Osman Goni
+            <span>
+              <img className="w-6 h-6 " src={code} alt="" />
+            </span>
+            <p className="text-white text-xl">Osman Goni</p>
           </div>
 
           {/* Center: Menu Links */}
-          <div className="flex gap-8 justify-center items-center">
+          <div className="flex gap-8 justify-center items-center text-xl">
             <Link
               to="home"
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
-              activeClass="text-indigo-600 border-b-2 border-indigo-600 font-semibold"
-              className="cursor-pointer flex items-center gap-1"
+              activeClass="text-indigo-600  font-semibold"
+              className="cursor-pointer flex items-center gap-1 text-white"
             >
               <FaHome /> Home
             </Link>
@@ -60,8 +68,8 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              activeClass="text-indigo-600 border-b-2 border-indigo-600 font-semibold"
-              className="cursor-pointer"
+              activeClass="text-indigo-600  font-semibold"
+              className="cursor-pointer text-white"
             >
               About
             </Link>
@@ -71,8 +79,8 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              activeClass="text-indigo-600 border-b-2 border-indigo-600 font-semibold"
-              className="cursor-pointer"
+              activeClass="text-indigo-600  font-semibold"
+              className="cursor-pointer text-white"
             >
               Skills
             </Link>
@@ -82,8 +90,8 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              activeClass="text-indigo-600 border-b-2 border-indigo-600 font-semibold"
-              className="cursor-pointer"
+              activeClass="text-indigo-600  font-semibold"
+              className="cursor-pointer text-white"
             >
               Projects
             </Link>
@@ -93,8 +101,8 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              activeClass="text-indigo-600 border-b-2 border-indigo-600 font-semibold"
-              className="cursor-pointer"
+              activeClass="text-indigo-600  font-semibold"
+              className="cursor-pointer text-white"
             >
               Contact
             </Link>
@@ -102,8 +110,12 @@ const Navbar = () => {
 
           {/* Right: CV Button for Desktop */}
           <div className="flex-1 flex justify-end  lg:flex">
-            <Link to="/">
-              <button className="btn btn-primary">My CV</button>
+            <Link
+              to="/"
+              className="rounded px-6 py-3 overflow-hidden cursor-pointer group bg-gradient-to-r from-blue-400 to-purple-500 relative hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 text-white hover:ring-2 hover:ring-offset-2 transition-all ease-out duration-300"
+            >
+              <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-cyan-400 opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+              <span className="relative text-center">Download Resume</span>
             </Link>
           </div>
         </div>
