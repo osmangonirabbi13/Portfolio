@@ -110,13 +110,15 @@ const Navbar = () => {
 
           {/* Right: CV Button for Desktop */}
           <div className="flex-1 flex justify-end  lg:flex">
-            <Link
-              to="/"
+            <a
+              href="https://drive.google.com/file/d/1Pa7qg47cRpyzGjDuWB0hofHtGb9wAmAq/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded px-6 py-3 overflow-hidden cursor-pointer group bg-gradient-to-r from-blue-400 to-purple-500 relative hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 text-white hover:ring-2 hover:ring-offset-2 transition-all ease-out duration-300"
             >
               <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-cyan-400 opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
               <span className="relative text-center">Download Resume</span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
